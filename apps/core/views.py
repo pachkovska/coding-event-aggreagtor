@@ -1,12 +1,12 @@
 from django.shortcuts import render
-from models import coding_event_query
+#from models import coding_event_query
 
 # Two example views. Change or delete as necessary.
 def home(request):
-    class EventForm(forms.ModelForm):
-        class Meta:
-            model = coding_event_query
-            fields = ['text', 'image']
+    #class EventForm(forms.ModelForm):
+     #   class Meta:
+      #      model = coding_event_query
+       #     fields = ['text', 'image']
 
     context = {
     }

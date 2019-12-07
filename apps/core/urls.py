@@ -4,7 +4,7 @@ from apps.core import views
 
 urlpatterns = [
     path('', views.home, name='home'),
-    path('results/', views.contact, name='results'),
+    path('results/', views.results, name='results'),
     path('mission_statement/', views.mission_statement, name='mission_statement'),
     path('about/', views.contact, name='contact'),
 
