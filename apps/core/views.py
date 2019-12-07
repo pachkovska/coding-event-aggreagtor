@@ -23,7 +23,7 @@ def mission_statement(request):
     context = {
     }
 
-    return render(request, 'pages/mission_statment.html', context)
+    return render(request, 'pages/mission_statement.html', context)
 
 def contact(request):
     context = {
