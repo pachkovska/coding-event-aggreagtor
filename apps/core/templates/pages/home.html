@@ -1,23 +1,55 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block title %}
-    My Site - Home
-{% endblock title %}
+    {% extends "base.html" %}
 
+<head>
 
-{% block content %}
-<div class="jumbotron">
-  <h1 class="display-4">My Site</h1>
-  <p class="lead">This is a simple Jumbotron component from Bootstrap 4.</p>
-  <hr class="my-4">
-  <p>Edit this to include your content.</p>
-  <p class="lead">
-    <a class="btn btn-primary btn-lg" href="{% url 'about' %}" role="button">Learn more</a>
-  </p>
-</div>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<p>More stuff. {{ example_context_variable }}.</p>
+  {% block title %}
+  <title> Discover Great Projects To Work On </title>
+  {% endblock title %}
+    
+  {% block content %}
+<h3> Discover Great Projects To Work On </h3>
 
-{% endblock content %}
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="../../static/CSS/custom.css" rel="stylesheet">
+</head>
 
+<body>
+        
+                              <div class="navbar"> 
+                                  <div class="navbar-inner">
+                                      <ul class="nav">
+                                        <a class="navbar-inner" href="projects.html"></i> Project Base</a>
+                                        <a class="navbar-inner" href="mission_statement.html" ></i> Mission</a>
+                                        <a class="navbar-inner" href="contact.html"></i> Contact</a>
+                                      </ul>
+                                </div>
+                              </div>
 
+                              <br>
+                            </br>
+                              
+                              <div class="form">
+                                        <form class="navbar-form pull-right">
+                                            <input type="text" class="form" name="Project Name" placeholder="Project Name">
+                                            <p> 
+                                                <input type="text" class="form" name="Location" placeholder="Location">
+                                            </P>
+                                            <input type="url" class="form" name="Gihub link to the Project" placeholder="Gihub link to the Project">
+                                            <p>
+                                                <input type="text" class="form" name="Discription Summary" placeholder="Discription Summary">
+                                            </p>
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                        </form>
+                              </div>
+                                    </div>
+                           
+</body>
+</html>
+                      
+{% endblock content %}  
