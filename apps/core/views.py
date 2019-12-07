@@ -17,7 +17,7 @@ def results(request):
     context = {
     }
 
-    return render(request, 'pages/results.html', context)
+    return render(request, 'pages/projects.html', context)
 
 def mission_statement(request):
     context = {

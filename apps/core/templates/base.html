@@ -7,7 +7,6 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>
         {% block title %}
-            My Site
         {% endblock title %}
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,32 +29,36 @@
 
 <body>
 
-<nav class="navbar navbar-expand-md">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        
     <div class="container">
-        <a class="navbar-brand" href="/">
-            <!-- Add your logo here!  <img src="" /> -->
-            My Site
-        </a>
+        <!-- <a class="navbar-brand" href="/">
+             Add your logo here!  <img src="" /> 
+            
+        </a> -->
 
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon">
-                ☰
-            </span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'home' %}">Start</a>
+                    <!-- <a class="nav-link" href="{% url 'home' %}">Start</a> -->
+                    <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'about' %}">About</a>
+                    <!-- <a class="nav-link" href="{% url 'view_all_users' %}">Users</a> -->
+                    <a class="nav-link" href="{% url 'results' %}">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'view_all_users' %}">Users</a>
+                    <a class="nav-link" href="{% url 'mission_statement' %}">Our Mission</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
                 </li>
             </ul>
-            <ul class="navbar-nav ml-auto">
+            <!-- <ul class="navbar-nav ml-auto">
                 {% if request.user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'logout' %}" >Sign Out</a>
@@ -74,13 +77,13 @@
                         <a id="log-in-link" class="nav-link" href="{% url 'signup' %}">Sign up</a>
                     </li>
                 {% endif %}
-            </ul>
+            </ul> -->
 
         </div>
     </nav>
 </div>
 
-
+<h3>Your Favorite Project Board</h3>
 
 {% block main %}
     <div class="container pt-2">
