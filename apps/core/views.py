@@ -1,7 +1,13 @@
+from django.core.mail import send_mail, BadHeaderError
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
-#from models import coding_event_query
+from django import forms
 
-# Two example views. Change or delete as necessary.
+class ContactForm(forms.Form):
+    from_email = forms.EmailField(required=True)
+    subject = forms.CharField(required=True)
+    message = forms.CharField(widget=forms.Textarea, required=True)
+
 def home(request):
     #class EventForm(forms.ModelForm):
      #   class Meta:
@@ -26,8 +32,17 @@ def mission_statement(request):
     return render(request, 'pages/mission_statement.html', context)
 
 def contact(request):
-    context = {
-    }
-
-    return render(request, 'pages/contact.html', context)
+    if request.method == 'GET':
+        form = ContactForm()
+    else:
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            subject = form.cleaned_data['subject']
+            from_email = form.cleaned_data['from_email']
+            message = form.cleaned_data['message']
+            try:
+                send_mail(subject, message, from_email, ['dsmindich@gmail.com'])
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+    return render(request, "pages/contact.html", {'form': form})
 
