@@ -71,6 +71,7 @@ def results(request):
     tech_stack = {
         'HTML': 45,
         'Python': 25,
+        'Bash': 3,
     }
 
     labels = list(tech_stack.keys())
