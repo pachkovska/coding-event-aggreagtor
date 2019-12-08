@@ -9,5 +9,6 @@ class repo_info(models.Model):
     description = models.TextField(max_length=300)
     github_username = models.CharField(max_length=160)
     repo_name = models.CharField(max_length=160)
+    created = models.DateTimeField(auto_now_add=True)
 
 

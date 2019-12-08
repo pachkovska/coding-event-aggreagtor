@@ -5,6 +5,12 @@
   margin-left: 10%;
 } */
 
+#myChart {
+  /* position: relative;  */
+  /* height: 50%!important;
+  width: 50%!important; */
+} 
+
 
 /* .navbar {
     background: linear-gradient(135deg, #f2f6fe 0%, #3caee7 100%);

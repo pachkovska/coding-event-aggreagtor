@@ -48,27 +48,41 @@ def home(request):
 
 def results(request):
 
-    repo = 'https://github.com/pachkovska/heroku-personal-app/branches/hello-there.git' #please note that this is a placeholder, this value will be coming from DB once it stored there after user submitted form
+    repo = repo_info.objects.all()
 
-    github_info = re.search(r'(?<=github\.com\/)((.*?)\/)((.*?)\/)', repo)
-    github_username = github_info.group(2)
-    repo_name = github_info.group(4)
+    # repo = 'https://github.com/pachkovska/heroku-personal-app/branches/hello-there.git' #please note that this is a placeholder, this value will be coming from DB once it stored there after user submitted form
 
-    stack_request_string = f'https://api.github.com/repos/{github_username}/{repo_name}/languages'
+    # github_info = re.search(r'(?<=github\.com\/)((.*?)\/)((.*?)\/)', repo)
+    # github_username = github_info.group(2)
+    # repo_name = github_info.group(4)
+
+    # stack_request_string = f'https://api.github.com/repos/{github_username}/{repo_name}/languages'
     
-    stack_response = requests.get(stack_request_string)
-    stack_json = stack_response.json()
+    # stack_response = requests.get(stack_request_string)
+    # stack_json = stack_response.json()
 
-    tech_stack = []
+    # tech_stack = []
     
-    code_total = sum(stack_json.values())
+    # code_total = sum(stack_json.values())
 
-    for key, value in stack_json.items():
-        tech_stack.append(f'{key}: {round(value/code_total*100, 1)}%')
+    # for key, value in stack_json.items():
+    #     tech_stack.append(f'{key}: {round(value/code_total*100, 1)}%')
 
+    tech_stack = {
+        'HTML': 45,
+        'Python': 25,
+        'Bash': 3,
+    }
+
+    labels = list(tech_stack.keys())
+    # print(labels)
+    values = list(tech_stack.values())
+    # print(values)
 
     context = {
-        "tech_stack": tech_stack,
+        "repos": repo,
+        "labels": labels,
+        "values": values,
     }
 
     return render(request, 'pages/projects.html', context)
