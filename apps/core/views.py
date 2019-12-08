@@ -8,7 +8,6 @@ from django.shortcuts import render, redirect
 from django import forms
 from apps.core.models import repo_info
 
-
 class ContactForm(forms.Form):
     from_email = forms.EmailField(required=True)
     subject = forms.CharField(required=True)
