@@ -12,5 +12,6 @@ psycopg2-binary = "*"
 requests = "*"
 redirect = "*"
 
+
 [dev-packages]
 django-debug-toolbar = "*"

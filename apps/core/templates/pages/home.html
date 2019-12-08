@@ -1,58 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
 
-    {% extends "base.html" %}
-
-<head>
-
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  {% extends "base.html" %}
 
   {% block title %}
   Home
   {% endblock title %}
     
   {% block content %}
-<!-- <h3> Discover Great Projects To Work On </h3> -->
-
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link href="../../static/CSS/custom.css" rel="stylesheet">
-</head>
-
-<body>
-        
-                              <!-- <div class="navbar"> 
-                                  <div class="navbar-inner">
-                                      <ul class="nav">
-                                        <a class="navbar-inner" href="projects.html"></i> Project Base</a>
-                                        <a class="navbar-inner" href="mission_statement.html" ></i> Mission</a>
-                                        <a class="navbar-inner" href="contact.html"></i> Contact</a>
-                                      </ul>
-                                </div>
-                              </div>
-
-                              <br>
-                            </br> -->
-                            {% load bootstrap4 %}
-                            {# Display a form #}
-                              <div>
-                                <form method="post" class="form">
-                                  {% csrf_token %}
-                                  {% bootstrap_form form %}
-                                  {% buttons %}
-                                      <button type=submit class="btn btn-primary">Submit</button>
-                                  {% endbuttons %}
-                              </form>
-                              </div>
-                                    </div>
-
-                                    
-
-
-
-
-                           
-</body>
-</html>
-                      
+    {% load bootstrap4 %}
+    {# Display a form #}
+      <div>
+        <form method="post" class="form">
+          {% csrf_token %}
+          {% bootstrap_form form %}
+          {% buttons %}
+              <button type=submit class="btn btn-primary">Submit</button>
+          {% endbuttons %}
+        </form> 
+     </div>
 {% endblock content %}  
