@@ -19,7 +19,7 @@
 <link href="../../static/CSS/custom.css" rel="stylesheet">
 </head>
 
-<body>
+
         
                               <!-- <div class="navbar"> 
                                   <div class="navbar-inner">
@@ -34,43 +34,40 @@
                               <br>
                             </br> -->
 
-                            <div class="split left">
-                             
-                                    <div class="jumbotron">
-                                            <div style="width:600px;height:500px;border:3px solid #000;">
-                                                <p> List of posted projects ordered in descending order by date of creation </p>
-                                                {% for language in tech_stack %} <p>{{ language }}</p>{% endfor %}
-                                        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-
+                    <div class="split left">
+                      
+                            <div class="jumbotron">
+                                    <div style="width:600px;height:500px;border:3px solid #000;">
                                         <p> List of posted projects ordered in descending order by date of creation </p>
                                         {% for language in tech_stack %} <p>{{ language }}</p>{% endfor %}
-                                        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
 
-                                        <p> List of posted projects ordered in descending order by date of creation </p>
-                                        {% for language in tech_stack %} <p>{{ language }}</p>{% endfor %}
-                                        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                                <p> List of posted projects ordered in descending order by date of creation </p>
+                                {% for language in tech_stack %} <p>{{ language }}</p>{% endfor %}
+                                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
 
-                                            </div>
-                                      </div>
-                                      </div>
+                                <p> List of posted projects ordered in descending order by date of creation </p>
+                                {% for language in tech_stack %} <p>{{ language }}</p>{% endfor %}
+                                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
 
-                                      <div class="verticalline">
-                                            
-                                          </div>
-                              
-                              <div class="split right">
-                                <div class="centered">
-                                    <div class="jumbotron">
-                                        <h1 class="display-4">Hello, world!</h1>
-                                        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-                                       
-                                        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                                        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-                                </div>
+                                    </div>
+                              </div>
                               </div>
 
-                        
-                        </body>
-                        </html>
+                              <div class="verticalline">
+                                    
+                                  </div>
+                          
+                          <div class="split right">
+                            <div class="centered">
+                                <div class="jumbotron">
+                                    <h1 class="display-4">Hello, world!</h1>
+                                    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                                    
+                                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                                    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                            </div>
+                          </div>
+                                  
                                               
                         {% endblock content %}  
