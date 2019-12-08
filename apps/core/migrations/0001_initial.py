@@ -21,6 +21,7 @@ class Migration(migrations.Migration):
                 ('description', models.CharField(max_length=300)),
                 ('github_username', models.CharField(max_length=160)),
                 ('repo_name', models.CharField(max_length=160)),
+                ('created', models.DateTimeField()),
             ],
         ),
     ]

@@ -48,6 +48,8 @@ def home(request):
 
 def results(request):
 
+    repo = repo_info.objects.all()
+
     # repo = 'https://github.com/pachkovska/heroku-personal-app/branches/hello-there.git' #please note that this is a placeholder, this value will be coming from DB once it stored there after user submitted form
 
     # github_info = re.search(r'(?<=github\.com\/)((.*?)\/)((.*?)\/)', repo)
@@ -72,11 +74,12 @@ def results(request):
     }
 
     labels = list(tech_stack.keys())
-    print(labels)
+    # print(labels)
     values = list(tech_stack.values())
-    print(values)
+    # print(values)
 
     context = {
+        "repos": repo,
         "labels": labels,
         "values": values,
     }
