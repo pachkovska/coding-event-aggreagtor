@@ -6,19 +6,41 @@ import re
 from django.http import HttpResponse
 from django.shortcuts import render
 from django import forms
+from apps.core.models import repo_info
 
 class ContactForm(forms.Form):
     from_email = forms.EmailField(required=True)
     subject = forms.CharField(required=True)
     message = forms.CharField(widget=forms.Textarea, required=True)
 
-def home(request):
-    #class EventForm(forms.ModelForm):
-     #   class Meta:
-      #      model = coding_event_query
-       #     fields = ['text', 'image']
+class projectForm(forms.ModelForm):
+        class Meta:
+            model = repo_info
+            fields = [
+                'project_name',
+                'location',
+                'github_link',
+                'description',
+                 ]
 
+def home(request):
+    if request.method == 'POST':
+
+        # Create a form instance and populate it with data from the request
+        form = projectForm(request.POST)
+
+        if form.is_valid():
+            # Create a new repo object using the ModelForm's built-in .save()
+            # giving it from the cleaned_data form.
+            post = form.save()
+            
+
+    else:
+        # if a GET we'll create a blank form
+        form = projectForm()
+           
     context = {
+        'form': form
     }
 
     return render(request, 'pages/home.html', context)

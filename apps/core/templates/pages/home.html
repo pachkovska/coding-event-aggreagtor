@@ -35,17 +35,11 @@
                             </br> -->
                               
                               <div class="form">
-                                        <form class="navbar-form pull-right">
-                                            <input type="text" class="form" name="Project Name" placeholder="Project Name">
-                                            <p> 
-                                                <input type="text" class="form" name="Location" placeholder="Location">
-                                            </P>
-                                            <input type="url" class="form" name="Gihub link to the Project" placeholder="Gihub link to the Project">
-                                            <p>
-                                                <input type="text" class="form" name="Discription Summary" placeholder="Discription Summary">
-                                            </p>
-                                            <button type="submit" class="btn btn-primary">Submit</button>
-                                        </form>
+                                <form method="POST" class="post-form">
+                                 {% csrf_token %}
+                                 {{ form.as_p }}
+                                 <button type="submit" class="save btn btn-default">Save</button>
+                                </form>
                               </div>
                                     </div>
                            
