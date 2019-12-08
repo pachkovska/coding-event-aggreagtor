@@ -33,15 +33,24 @@
 
                               <br>
                             </br> -->
-                              
-                              <div class="form">
-                                <form method="POST" class="post-form">
-                                 {% csrf_token %}
-                                 {{ form.as_p }}
-                                 <button type="submit" class="save btn btn-default">Save</button>
-                                </form>
+                            {% load bootstrap4 %}
+                            {# Display a form #}
+                              <div>
+                                <form method="post" class="form">
+                                  {% csrf_token %}
+                                  {% bootstrap_form form %}
+                                  {% buttons %}
+                                      <button type=submit class="btn btn-primary">Submit</button>
+                                  {% endbuttons %}
+                              </form>
                               </div>
                                     </div>
+
+                                    
+
+
+
+
                            
 </body>
 </html>

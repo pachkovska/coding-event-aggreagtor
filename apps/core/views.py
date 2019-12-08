@@ -4,9 +4,10 @@ import requests
 import json
 import re
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django import forms
 from apps.core.models import repo_info
+
 
 class ContactForm(forms.Form):
     from_email = forms.EmailField(required=True)
@@ -33,6 +34,7 @@ def home(request):
             # Create a new repo object using the ModelForm's built-in .save()
             # giving it from the cleaned_data form.
             post = form.save()
+            return redirect('/results/')
             
 
     else:
@@ -91,5 +93,6 @@ def contact(request):
                 send_mail(subject, message, from_email, ['dsmindich@gmail.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
+            return redirect('/contact/')
     return render(request, "pages/contact.html", {'form': form})
 
