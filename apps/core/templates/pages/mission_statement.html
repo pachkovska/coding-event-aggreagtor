@@ -1,42 +1,29 @@
+{% extends "base.html" %}
 
-  {% extends "base.html" %}
-  {% block title %}
-  Our Mission
-  {% endblock title %}
-    
-  {% block content %}
+{% block title %}
+Our Mission
+{% endblock title %}
+ 
+{% block active_link_mission %}
+active
+{% endblock %}
 
-<h3> Discover Great Projects To Work On </h3>
+{% block content %}
+<img class="mission-img" src="../../static/images/mission.jpg">
 
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link href="../../static/CSS/custom.css" rel="stylesheet">
-</head>
-      <div class =col-md-3>
-        </div>
-        <img src="../../static/images/mission.jpg" width="1200" height="300">
-        <div class =col-md-6>
-        </div>
-
-        <div class =col-md-3>
-        </div>
-
-  <div class="jumbotron">
-
-    <div class=row>
-        <div class =col-md-3></div>
-        <div class =col-md-6>        
-
-                    <div>
-                      <h2>Why did we build this?</h2>
-                        <p> Coding is hard. People are soft.</p>
-                        <p> This app helps you use people to make coding less hard. </p>
-                        <p> Thanks to all our hard work, you can now view github projects 
-                            that people would like help with. Our innovative app shows you their project name, 
-                            a nice description about what it is, and their tech stack in a sweet, sweet doughnut chart.</p>
-                    </div>
-        </div>
-            <div class =col-md-3></div>
-      </div>
-
-                                              
+<div class="row">
+  <div class="col-md-2">
+  </div>
+  <div class="col-md-8 margin-mission-text">
+    <h3>Why did we build this?</h3>
+    <p> Coding is hard. People are soft.</p>
+    <p> This app helps you use people to make coding less hard. </p>
+    <p> Thanks to all our hard work, you can now view github projects 
+        that people would like help with. Our innovative app shows you their project name, 
+        a nice description about what it is, and their tech stack in a sweet, sweet doughnut chart.</p>
+  </div>
+  <div class="col-md-2">
+  </div>
+</div>
+                                                                   
 {% endblock content %}  

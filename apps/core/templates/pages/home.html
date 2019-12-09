@@ -1,35 +1,39 @@
 
+{% extends "base.html" %}
 
-  {% extends "base.html" %}
+{% block title %}
+Home
+{% endblock title %}
 
-  {% block title %}
-  Home
-  {% endblock title %}
-    
-  {% block content %}
-    {% load bootstrap4 %}
-    {# Display a form #}
-    <div class=row>
-      <div class =col-md-3></div>
-      <div class =col-md-6>
-        <h2>It's dangerous to go alone, use this!</h2>
-        <p> Add a github link to a project you're working on and get some help!</p>
-    </div> 
-    <div class =col-md-3></div>
-    </div>
-    <div class=row>
-      <div class =col-md-3></div>
-          <div class =col-md-6>
-      <div>
-        <form method="post" class="form">
-          {% csrf_token %}
-          {% bootstrap_form form %}
-          {% buttons %}
-              <button type=submit class="btn btn-dark">Submit</button>
-          {% endbuttons %}
-        </form> 
-     </div>
-    </div>
-     <div class =col-md-3></div>
+{% block active_link_home %}
+active
+{% endblock %}
+
+{% block content %}
+  {% load bootstrap4 %}
+  {# Display a form #}
+  <div class=row>
+    <div class =col-md-2></div>
+    <div class =col-md-8>
+      <h2 class="mb-4">We wanna be your favorite project board!</h2>
+      <h3>It's dangerous to go alone, use this!</h3>
+      <p> Add a github link to a project you're working on and get some help!</p>
+  </div> 
+  <div class =col-md-2></div>
   </div>
+  <div class=row>
+    <div class =col-md-2></div>
+        <div class =col-md-8>
+    <div>
+      <form method="post" class="form">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        {% buttons %}
+            <button type=submit class="btn btn-block btn-dark custom-bg mt-4">Submit</button>
+        {% endbuttons %}
+      </form> 
+    </div>
+  </div>
+    <div class =col-md-2></div>
+</div>
 {% endblock content %}  
