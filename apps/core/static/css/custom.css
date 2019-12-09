@@ -3,6 +3,10 @@
 body {
   margin-top: 5%;
   color: #545454;
+  font-family: 'Raleway', sans-serif;
+  font-weight: lighter;
+  font-size: 20px;
+  letter-spacing: 1px;
 }
 
 .hline { 
@@ -19,11 +23,6 @@ body {
   background-color: #344152;
 }
 
-/* .form {
-    text-align: center;
-    font-size: 20px;
-} */
-
 .mission-img {
   position: fixed;
   float: left;
@@ -36,4 +35,21 @@ body {
 
 .margin-mission-text {
   margin-top: 30%;
+}
+
+.nav-item {
+  font-size: 20px;
+}
+
+.card {
+  padding: 15px; /* JUST TO LOOK COOL */
+  border: 1px solid #eee;  /* JUST TO LOOK COOL */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 20px;
+  transition: all .3s ease-in-out;
+  height: 300px;
+}
+
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.70) 0px 19px 43px;
+  transform: translate3d(0px, -1px, 0px);
 }
