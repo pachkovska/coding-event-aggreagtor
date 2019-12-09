@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">   
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">  
     <link href="{% static 'css/bootstrap/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/signinform.css' %}" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">   
@@ -25,6 +26,7 @@
             </button>
             <div class="collapse navbar-collapse custom-bg" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
+                    <a class="navbar-brand" href="/"><img src="../static/images/logo.png" width="40" height="40" /> Code Board |  </a>
                     <a class="nav-item nav-link {% block active_link_home %}{% endblock %}" href="/">Home</a>
                     <a class="nav-item nav-link {% block active_link_projects %}{% endblock %}" href="{% url 'results' %}">Projects</a>
                     <a class="nav-item nav-link {% block active_link_mission %}{% endblock %}" href="{% url 'mission_statement' %}">Our Mission</a>
