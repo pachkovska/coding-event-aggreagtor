@@ -46,10 +46,19 @@ body {
   border: 1px solid #eee;  /* JUST TO LOOK COOL */
   box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 20px;
   transition: all .3s ease-in-out;
-  height: 300px;
+  height: 350px;
 }
 
 .card:hover {
   box-shadow: rgba(0, 0, 0, 0.70) 0px 19px 43px;
   transform: translate3d(0px, -1px, 0px);
+}
+
+.chart {
+  max-width: 250;
+  max-height: 250;
+}
+
+footer {
+  font-size: 14px;
 }

@@ -24,7 +24,7 @@
             <p>Repository:<a href="{{ repo.link }}"> {{ repo.link }} </a></p> 
         </div>
     <div class="col-6">
-          <canvas id="{{ repo.project_name }}" class="chart" width="200" height="200"></canvas>
+          <canvas id="{{ repo.project_name }}" class="chart"></canvas>
           <script type="text/javascript">  
             var ctx = document.getElementById('{{ repo.project_name }}').getContext('2d');
             var stackLabels = {{ repo.labels|safe }};
