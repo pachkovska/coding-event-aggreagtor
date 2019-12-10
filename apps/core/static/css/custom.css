@@ -9,6 +9,10 @@ body {
   letter-spacing: 1px;
 }
 
+.strech {
+  min-height: calc(100vh - 70px);
+}
+
 .hline { 
   width:100%; 
   height:1px; 
@@ -61,4 +65,5 @@ body {
 
 footer {
   font-size: 14px;
+  height: 70px;
 }
