@@ -68,6 +68,10 @@ footer {
   height: 70px;
 }
 
-/* #carouselLanguages {
-  margin-left: 50%;
-} */
+.black {
+  color: #000;
+}
+
+.inline {
+  display: inline;
+}

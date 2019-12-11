@@ -18,10 +18,18 @@
     <div class="card">
       <div class="card-body">
         <div class="row">
-        <div class="col-6">
-            <p><strong>Project name:</strong> {{ repo.project_name }}</p>
-            <p>Description: {{ repo.description }}</p>
-            <p>Repository:<a href="{{ repo.link }}"> {{ repo.link }} </a></p> 
+          <div class="col-6">
+            <div class="mb-3">
+              <p class="black inline">Project name:</p> <p class="inline">{{ repo.project_name }}</p>
+            </div>
+            <div class="mb-3">
+              <p class="black inline">Description:</p> <p class="inline">{{ repo.description }}</p>
+            </div>
+            <div>
+              <p class="black">Repository: <a class="btn" target="_blank" href="{{ repo.link }}">
+                <i class="fab fa-github-square fa-3x"></i></a>
+              </p> 
+            </div>            
         </div>
     <div class="col-6">
           <canvas id="{{ repo.project_name }}" class="chart"></canvas>
