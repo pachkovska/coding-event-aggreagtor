@@ -13,7 +13,7 @@ class ContactForm(forms.Form):
     subject = forms.CharField(required=True)
     message = forms.CharField(widget=forms.Textarea, required=True)
 
-class projectForm(forms.ModelForm):
+class ProjectForm(forms.ModelForm):
         class Meta:
             model = repo_info
             fields = [
@@ -28,7 +28,7 @@ def home(request):
     if request.method == 'POST':
 
         # Create a form instance and populate it with data from the request
-        form = projectForm(request.POST)
+        form = ProjectForm(request.POST)
 
         if form.is_valid():
             # Create a new repo object using the ModelForm's built-in .save()
@@ -39,7 +39,7 @@ def home(request):
 
     else:
         # if a GET we'll create a blank form
-        form = projectForm()
+        form = ProjectForm()
            
     context = {
         'form': form
@@ -117,7 +117,7 @@ def contact(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             subject = form.cleaned_data['subject']
-            from_email = form.cleaned_data['email']
+            email = form.cleaned_data['email']
             message = form.cleaned_data['message']
             try:
                 send_mail(subject, message, email, ['dsmindich@gmail.com'])
