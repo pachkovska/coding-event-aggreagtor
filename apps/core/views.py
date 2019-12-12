@@ -6,7 +6,7 @@ import re
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django import forms
-from apps.core.models import repo_info
+from apps.core.models import Repo_info
 
 class ContactForm(forms.Form):
     email = forms.EmailField(required=True)
@@ -15,11 +15,12 @@ class ContactForm(forms.Form):
 
 class ProjectForm(forms.ModelForm):
         class Meta:
-            model = repo_info
+            model = Repo_info
             fields = [
                 'project_name',
                 'location',
                 'github_link',
+                'email',
                 'description',
                  ]
 
@@ -49,7 +50,7 @@ def home(request):
 
 def results(request):
 
-    repo = repo_info.objects.all()
+    repo = Repo_info.objects.all()
 
     project_list = []
 
@@ -67,6 +68,7 @@ def results(request):
             'link': link.github_link,
             'project_name': link.project_name,
             'description': link.description,
+            'email':link.email,
             'labels': list(stack_json.keys()),
             'values': list(stack_json.values()),
         })

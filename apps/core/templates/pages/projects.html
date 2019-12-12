@@ -29,7 +29,11 @@
               <p class="black">Repository: <a class="btn" target="_blank" href="{{ repo.link }}">
                 <i class="fab fa-github-square fa-3x"></i></a>
               </p> 
-            </div>            
+            </div>     
+            <div>
+              <p class="black">Like what you see? <a href="mailto:{{ repo.email }}">Email the project owner!</a>
+              </p> 
+            </div>        
         </div>
     <div class="col-6">
           <canvas id="{{ repo.project_name }}" class="chart"></canvas>
