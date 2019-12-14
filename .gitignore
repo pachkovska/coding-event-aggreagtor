@@ -290,3 +290,5 @@ pip-selfcheck.json
 # Remove sqlite3 from vc
 db.sqlite3
 db.sqlite3.backup
+
+.vscode
