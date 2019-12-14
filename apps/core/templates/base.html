@@ -31,6 +31,15 @@
                     <a class="nav-item nav-link {% block active_link_projects %}{% endblock %}" href="{% url 'results' %}">Projects</a>
                     <a class="nav-item nav-link {% block active_link_mission %}{% endblock %}" href="{% url 'mission_statement' %}">Our Mission</a>
                     <a class="nav-item nav-link {% block active_link_contact %}{% endblock %}" href="{% url 'contact' %}">Contact</a>
+                    {% if request.user.is_authenticated %}
+                    <div class="right-align">
+                        <a class="nav-item nav-link" href="{% url 'logout' %}" >Sign Out</a>
+                    </div>
+                    {% else %}
+                    <div class="right-align">
+                        <a id="log-in-link" class="nav-item nav-link" href="{% url 'login' %}">Log In</a>
+                    </div>    
+                    {% endif %}  
                 </div>
             </div>
         </nav> 
