@@ -76,3 +76,13 @@ footer {
 .inline {
   display: inline;
 }
+
+.right-align {
+  position: absolute;
+  right: 0;
+}
+
+.card-signin { /* overriding cards size that was set earlier */
+  height: auto;
+  width: 600px;
+} 
