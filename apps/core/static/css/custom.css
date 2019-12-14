@@ -37,8 +37,9 @@ body {
   display: inline-block;
 }
 
-.margin-mission-text {
-  margin-top: 30%;
+.mission-text {
+  margin-top: 40%;
+  background-color: white;
 }
 
 .nav-item {
