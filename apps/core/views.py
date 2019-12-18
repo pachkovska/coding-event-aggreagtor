@@ -3,7 +3,6 @@ from django.http import HttpResponse, HttpResponseRedirect
 import requests
 import json
 import re
-from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django import forms
 from apps.core.models import Repo_info
