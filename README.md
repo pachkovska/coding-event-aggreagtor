@@ -4,7 +4,6 @@
 
 The application for coders to collaborat on someone else's project or post project they started up for collaboration.
 
-See latest version of the app ![here](http://www.codeboard.org)
 
 ### To run the app locally use the following steps:
 
